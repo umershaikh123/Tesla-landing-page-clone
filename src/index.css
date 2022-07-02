@@ -1,13 +1,87 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+/* Custom Css  */
+
+
+
+* {
+   font-family: 'Rubik', sans-serif; 
+  
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  overflow-x:hidden ;
+}
+
+
+#links li a {
+  padding: 0.6rem;
+  border-radius: 100px;
+ 
+
+}
+ 
+
+
+#links li a:hover {
+ 
+  transition: all 0.25s linear;
+  background-color: rgba(221, 235, 247, 0.979);
+
+}
+ 
+.Section { 
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;  
+  background-size : cover;
+  background-position : center;     
+  
+} 
+
+
+#btn1 , #btn2{
+  transition: all 0.2s linear;
+}
+
+#btn1:hover {
+  background-color: white;
+  color: black;
+
+}
+
+#btn2:hover {
+  background-color: rgba(0, 0, 0, 0.623);
+  color: white;
+
+}
+
+.Down{
+  animation: down infinite 1.5s;
+
+}
+
+
+
+
+
+@keyframes down {
+  0% ,  20% , 50% , 80% , 100%  {
+    transform: translateY(0);
+  }
+
+  40%{
+    transform: translateY(5px);
+  }
+
+  60%{
+    transform: translateY(2px);
+  }
+ 
 }
